@@ -1,11 +1,11 @@
 # meme-stocker
 
-MemeStocker is a Meme Stock tracker that pulls the Top 10 tickers from the Reddit subreddit - Wallstreetbets. The goal of the application is to equip retail investors interested in the meme stock trend with the top trending tickers.
+___MemeStocker___ is a Meme Stock tracker that pulls the ___Top 10___ tickers from the Reddit subreddit - Wallstreetbets. The goal of the application is to equip retail investors interested in the meme stock trend with the top trending tickers.
 
 <a href="https://tringuyen1086.github.io/meme-stocker/"><img width="728" src="./assets/images/mockup-wip.png" alt="Mock-Up"></a>
 
 ## Links
-* Live Site: TBD
+* Live Site: https://tringuyen1086.github.io/meme-stocker/
 * Code Repo: https://github.com/tringuyen1086/meme-stocker
 
 ## Built With
@@ -28,31 +28,35 @@ TBD
 
 This project is graded based on the following criteria:
 
-* Technical Acceptance Criteria: 25%
+* ___Technical Acceptance Criteria___: 25%
     * Satisfies the following code requirements:
         * Application uses at least two server-side APIs.
         * Application uses client-side storage to store persistent data.
         * Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
         * Application uses a CSS framework other than Bootstrap.
         * Application is interactive (accepts and responds to user input)
-* Concept: 10%
+* ___Concept___: 10%
     * Application should be a unique and novel idea.
     * Your group should clearly and concisely articulate your project idea.
-* Deplopyment: 20%
+* ___Deplopyment___: 20%
     * Application deployed at live URL and loads with no errors.
     * Application GitHub URL submitted.
     * Portfolio at live URL submitted, featuring project.
-* Repository Quality: 10%
+* ___Repository Quality___: 10%
     * Repository has a unique name.
     * Repository follows best practices for file structure and naming conventions.
     * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
     * Repository contains multiple descriptive commit messages.
     * Repository contains quality README file with description, screenshot, and link to deployed application.
-* Presentation: 10%
+* ___Application Quality___: 15%
+    * Application user experience is intuitive and easy to navigate.
+    * Application user interface style is clean and polished.
+    * Application is responsive.
+* ___Presentation___: 10%
     * Your group should present using Powerpoint or a similar presentation software.
     * Every group member should speak during the presentation.
     * Your presentation should follow the Project [Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit#slide=id.p).
-* Collaboration: 10%
+* ___Collaboration___: 10%
     * There are no major disparities in the number of GitHub contributions between group members.
 
 ## How to Submit the Challenge
