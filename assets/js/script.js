@@ -1,12 +1,16 @@
-var url = "https://tradestie.com/api/v1/apps/reddit";
 
-var xhr = new XMLHttpRequest();
-xhr.open("GET", url);
+// Fetch API Wallstreetbets
 
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
-      console.log(xhr.status);
-      console.log(xhr.responseText);
-   }};
-
-xhr.send();
+fetch("https://tradestie.com/api/v1/apps/reddit").then(function (response) {
+	
+// The API call was successful!
+	return response.json();
+}).then(function (data) {
+	
+  // This is the JSON from our response
+	console.log(data);
+}).catch(function (err) {
+	
+  // There was an error
+	console.warn('Something went wrong.', err);
+});
