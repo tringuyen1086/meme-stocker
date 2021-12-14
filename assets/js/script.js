@@ -41,3 +41,6 @@ function appenddata(data) {
     mainContainer.appendChild(div2);
   }
 }
+// Add Yahoo API link
+function yahoolink() {
+  document.getElementById("mstocks").innerHTML = (url)}
