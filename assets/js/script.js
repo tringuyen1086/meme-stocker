@@ -2,21 +2,23 @@
 // Wallstreetbets API
 const url = 'https://tradestie.com/api/v1/apps/reddit';
 
-
+// Make request to URL
 fetch(url)
 
   .then(function (response) {
     return response.json();
 })
-
+  // Call appenddata function
   .then(function (data) {
     appenddata(data);
   })
 
+  // Catch any errors that may occur
   .catch(function (error) {
     console.log(error);
   });
 
+// Sort data by Sentiment Score
 function appenddata(data) {
   let sortdata = data.sort((firstEl, secondEl) => {
     if (firstEl.sentiment_score > secondEl.sentiment_score) {
@@ -28,6 +30,7 @@ function appenddata(data) {
     }
 });
 
+  // Dynamically fill divs with JSON data
   var mainContainer = document.getElementById("mstocks");
   for (var i = 0; i < 10; i++) {
     var div = document.createElement("div");    
