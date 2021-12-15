@@ -3,6 +3,7 @@ for (var i = 0; i < openmodal.length; i++) {
   openmodal[i].addEventListener('click', function(event){
    event.preventDefault()
    toggleModal()
+   fmpApi()
   })
 }
 
@@ -83,9 +84,10 @@ function yahoolink() {
   document.getElementById("mstocks").innerHTML = (url)}
 
 // FMP API call
-var nething = "AAPL";
+function fmpApi(){
 var ticker = document.getElementById('tickersymbol').value;
-var requestUrl = 'https://financialmodelingprep.com/api/v3/profile/MSFT?apikey=203f41c2d13b0a556884a3a115113e59';
+var nething = "AAPL";
+var requestUrl = 'https://financialmodelingprep.com/api/v3/profile/'+ ticker +'?apikey=203f41c2d13b0a556884a3a115113e59';
 fetch(requestUrl)
   .then(function (response) {
     return response.json();
@@ -96,7 +98,23 @@ fetch(requestUrl)
     console.log(stonkData[0].companyName);
     console.log(stonkData[0].ceo);
     console.log(stonkData[0].symbol)
+    console.log("$" + stonkData[0].price)
+    console.log(stonkData[0].website)
+    var header =document.getElementById("modal-header").innerHTML = stonkData[0].companyName
+    const objectArray = Object.entries(stonkData[0]);
+    
+    // objectArray.forEach(([key, value]) => {
+    //   console.log(key); // 'one'
+    //   console.log(value); // 1
+    // });
+    var modalBody = document.getElementById("modal-body")
+    const iterator = objectArray.values();
+    for (x=0;x<10;x++){
+      console.log(objectArray[x])
+      var p = document.createElement('p');
+      p.innerHTML = objectArray[x];
+      modalBody.appendChild(p)
+    }
+    
   });
-  console.log(ticker)
-
-
+}
