@@ -1,8 +1,8 @@
 # meme-stocker
 
 ## Live Application Link
-[meme-stocker](https://tringuyen1086.github.io/meme-stocker/)
-[code-repo](https://github.com/tringuyen1086/meme-stocker.git)
+* [x] [meme-stocker](https://tringuyen1086.github.io/meme-stocker/)
+* [x] [code-repo](https://github.com/tringuyen1086/meme-stocker.git)
 
 ## Description
 
@@ -10,7 +10,7 @@ ___MemeStocker___ is a Meme Stock tracker that pulls the ___Top 10___ tickers fr
 
 ## Project Visual
 
-![launching-page]<a href="https://tringuyen1086.github.io/meme-stocker/"><img width="728" src="./assets/images/mockup-wip.png" alt="Mock-Up"></a>
+<a href="https://tringuyen1086.github.io/meme-stocker/"><img width="728" src="./assets/images/mockup-wip.png" alt="Mock-Up"></a>
 
 ## Built With
 * [x] [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
