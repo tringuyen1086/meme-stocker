@@ -85,7 +85,7 @@ function appenddata(data) {
 function yahoolink() {
   document.getElementById("mstocks").innerHTML = (url)}
 
-// FMP API call
+// FMP API call 
 function fmpApi(){
 var ticker = document.getElementById('tickersymbol').value;
 var nething = "AAPL";
@@ -97,30 +97,24 @@ fetch(requestUrl)
   .then(function (stonkData) {
     console.log('Your stonk');
     console.log(stonkData);
-    console.log(stonkData[0].companyName);
-    console.log(stonkData[0].ceo);
-    console.log(stonkData[0].symbol)
-    console.log("$" + stonkData[0].price)
-    console.log(stonkData[0].website)
     var header =document.getElementById("modal-header").innerHTML = stonkData[0].companyName
     const objectArray = Object.entries(stonkData[0]);
-    
-    // objectArray.forEach(([key, value]) => {
-    //   console.log(key); // 'one'
-    //   console.log(value); // 1
-    // });
     var modalBody = document.getElementById("modal-body")
-    const iterator = objectArray.values();
+
     for (x=0;x<10;x++){
       console.log(objectArray[x])
-      var p = document.createElement('p');
-      p.innerHTML = objectArray[x];
-      modalBody.appendChild(p)
+      var label = document.createElement('div');
+      var stonkValue = document.createElement('div');
+      label.innerHTML = objectArray[x][0];
+      stonkValue.innerHTML = objectArray[x][1]
+      modalBody.appendChild(label)
+      modalBody.appendChild(stonkValue)
     }
 
   });
 }
 
+// Clear Modal content
 function clearModal(){
   var modalBody = document.getElementById("modal-body")
   modalBody.innerHTML = "";
