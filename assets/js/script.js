@@ -20,6 +20,7 @@ document.onkeydown = function(evt) {
   var isEscape = false
   if ("key" in evt) {
    isEscape = (evt.key === "Escape" || evt.key === "Esc")
+   clearModal()
   } else {
    isEscape = (evt.keyCode === 27)
   }
@@ -35,6 +36,7 @@ function toggleModal () {
   modal.classList.toggle('opacity-0')
   modal.classList.toggle('pointer-events-none')
   body.classList.toggle('modal-active')
+  clearModal()
 }
 
 // Wallstreetbets API
@@ -115,6 +117,11 @@ fetch(requestUrl)
       p.innerHTML = objectArray[x];
       modalBody.appendChild(p)
     }
-    
+
   });
+}
+
+function clearModal(){
+  var modalBody = document.getElementById("modal-body")
+  modalBody.innerHTML = "";
 }
