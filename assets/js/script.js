@@ -2,8 +2,8 @@ var openmodal = document.querySelectorAll('.modal-open')
 for (var i = 0; i < openmodal.length; i++) {
   openmodal[i].addEventListener('click', function(event){
    event.preventDefault()
-   toggleModal()
    fmpApi()
+   toggleModal()
   })
 }
 
@@ -87,7 +87,6 @@ function yahoolink() {
 // FMP API call 
 function fmpApi(){
 var ticker = document.getElementById('tickersymbol').value;
-var nething = "AAPL";
 var requestUrl = 'https://financialmodelingprep.com/api/v3/profile/'+ ticker +'?apikey=203f41c2d13b0a556884a3a115113e59';
 fetch(requestUrl)
   .then(function (response) {
