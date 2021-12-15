@@ -40,7 +40,9 @@ function toggleModal () {
 const url = 'https://tradestie.com/api/v1/apps/reddit';
 
 // Make request to URL
-fetch(url)
+fetch(url, {
+  "method": "FETCH"
+})
 
   .then(function (response) {
     return response.json();
