@@ -20,7 +20,6 @@ document.onkeydown = function(evt) {
   var isEscape = false
   if ("key" in evt) {
    isEscape = (evt.key === "Escape" || evt.key === "Esc")
-   clearModal()
   } else {
    isEscape = (evt.keyCode === 27)
   }
