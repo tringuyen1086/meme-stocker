@@ -1,20 +1,24 @@
 # meme-stocker
 
+## Live Application Link
+[meme-stocker](https://tringuyen1086.github.io/meme-stocker/)
+[code-repo](https://github.com/tringuyen1086/meme-stocker.git)
+
+## Description
+
 ___MemeStocker___ is a Meme Stock tracker that pulls the ___Top 10___ tickers from the Reddit subreddit - Wallstreetbets. The goal of the application is to equip retail investors interested in the meme stock trend with the top trending tickers.
 
-<a href="https://tringuyen1086.github.io/meme-stocker/"><img width="728" src="./assets/images/mockup-wip.png" alt="Mock-Up"></a>
+## Project Visual
 
-## Links
-* Live Site: https://tringuyen1086.github.io/meme-stocker/
-* Code Repo: https://github.com/tringuyen1086/meme-stocker
+![launching-page]<a href="https://tringuyen1086.github.io/meme-stocker/"><img width="728" src="./assets/images/mockup-wip.png" alt="Mock-Up"></a>
 
 ## Built With
-* HTML
-* [Tailwind CSS](https://tailwindcss.com/)
-* [JQuery](https://jquery.com/)
-* [JavaScript](https://www.javascript.com/)
-* [Wallstreetbets API](https://tradestie.com/apps/reddit/api/)
-* [Yahoo! Finance API](https://www.yahoofinanceapi.com/)
+* [x] [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [x] [Tailwind CSS](https://tailwindcss.com/)
+* [x] [JQuery](https://jquery.com/)
+* [x] [JavaScript](https://www.javascript.com/)
+* [x] [Wallstreetbets API](https://tradestie.com/apps/reddit/api/)
+* [x] [Financial Modeling Prep](https://site.financialmodelingprep.com/)
 
 ## User Story
 
