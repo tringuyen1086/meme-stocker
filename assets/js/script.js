@@ -37,31 +37,31 @@ function toggleModal () {
 }
 
 // Wallstreetbets API
-const url = 'https://tradestie.com/api/v1/apps/reddit';
+// const url = 'https://tradestie.com/api/v1/apps/reddit';
 
 
-fetch(url)
+// fetch(url)
 
-  .then(function (response) {
-    return response.json();
-  })
+//   .then(function (response) {
+//     return response.json();
+//   })
 
-  .then(function (data) {
-    appenddata(data);
-  })
+//   .then(function (data) {
+//     appenddata(data);
+//   })
 
-  .catch(function (error) {
-    console.log(error);
-  });
+//   .catch(function (error) {
+//     console.log(error);
+//   });
 
-function appenddata(data) {
-  var mainContainer = document.getElementById("mstocks");
-  for (var i = 0; i < 10; i++) {
-    var div = document.createElement("div");    
-    div.innerHTML = data[i].ticker + data[i].sentiment_score;
-    mainContainer.appendChild(div);
-  }
-}
+// function appenddata(data) {
+//   var mainContainer = document.getElementById("mstocks");
+//   for (var i = 0; i < 10; i++) {
+//     var div = document.createElement("div");    
+//     div.innerHTML = data[i].ticker + data[i].sentiment_score;
+//     mainContainer.appendChild(div);
+//   }
+// }
 
 function sortList() {
   var list, i, switching, b, shouldSwitch;
@@ -95,3 +95,28 @@ function sortList() {
     }
   }
 }
+
+
+
+// market stack api 
+
+var nething = "AAPL";
+
+var ticker = document.getElementById('tickersymbol').value;
+
+var requestUrl = 'https://financialmodelingprep.com/api/v3/profile/MSFT?apikey=203f41c2d13b0a556884a3a115113e59';
+
+fetch(requestUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (stonkData) {
+    console.log('Your stonk');
+    console.log(stonkData);
+    console.log(stonkData[0].companyName);
+    console.log(stonkData[0].ceo);
+    console.log(stonkData[0].symbol)
+    // console.log(stonkData.data[0].symbol);
+  });
+
+  console.log(ticker)
