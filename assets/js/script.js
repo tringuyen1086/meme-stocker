@@ -75,7 +75,7 @@ function toggleModal () {
 }
 
 // Wallstreetbets API
-const url = 'https://tradestie.com/api/v1/apps/reddit';
+const url = 'https://cors-proxy-blah.herokuapp.com/get-json/?url=http://tradestie.com/api/v1/apps/reddit';
 
 // Make request to URL
 fetch(url)
