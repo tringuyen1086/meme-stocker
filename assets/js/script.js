@@ -3,6 +3,7 @@ for (var i = 0; i < openmodal.length; i++) {
   openmodal[i].addEventListener('click', function(event){
    event.preventDefault()
    toggleModal()
+   fmpApi()
   })
 }
 
@@ -34,6 +35,7 @@ function toggleModal () {
   modal.classList.toggle('opacity-0')
   modal.classList.toggle('pointer-events-none')
   body.classList.toggle('modal-active')
+  clearModal()
 }
 
 var openmodal = document.querySelectorAll('.modal-open')
@@ -120,10 +122,11 @@ function appenddata(data) {
 function yahoolink() {
   document.getElementById("mstocks").innerHTML = (url)}
 
-// FMP API call
-var nething = "AAPL";
+// FMP API call 
+function fmpApi(){
 var ticker = document.getElementById('tickersymbol').value;
-var requestUrl = 'https://financialmodelingprep.com/api/v3/profile/MSFT?apikey=203f41c2d13b0a556884a3a115113e59';
+var nething = "AAPL";
+var requestUrl = 'https://financialmodelingprep.com/api/v3/profile/'+ ticker +'?apikey=203f41c2d13b0a556884a3a115113e59';
 fetch(requestUrl)
   .then(function (response) {
     return response.json();
@@ -131,10 +134,25 @@ fetch(requestUrl)
   .then(function (stonkData) {
     console.log('Your stonk');
     console.log(stonkData);
-    console.log(stonkData[0].companyName);
-    console.log(stonkData[0].ceo);
-    console.log(stonkData[0].symbol)
+    var header =document.getElementById("modal-header").innerHTML = stonkData[0].companyName
+    const objectArray = Object.entries(stonkData[0]);
+    var modalBody = document.getElementById("modal-body")
+
+    for (x=0;x<10;x++){
+      console.log(objectArray[x])
+      var label = document.createElement('div');
+      var stonkValue = document.createElement('div');
+      label.innerHTML = objectArray[x][0];
+      stonkValue.innerHTML = objectArray[x][1]
+      modalBody.appendChild(label)
+      modalBody.appendChild(stonkValue)
+    }
+
   });
-  console.log(ticker)
+}
 
-
+// Clear Modal content
+function clearModal(){
+  var modalBody = document.getElementById("modal-body")
+  modalBody.innerHTML = "";
+}
