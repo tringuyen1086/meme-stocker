@@ -75,7 +75,7 @@
         </div>
         
         <!--Right Col-->
-        <div class="flex-1 flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+        <div id="mStocks" class="flex-1 flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
           <h1 class="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
               Top 10 Stocks
@@ -84,18 +84,12 @@
           <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">
             Fresh from the popular sub-reddit, r/WallStreetBets
           </p>
-          <ol class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
-            <li>1. GME</li>
-            <li>2. TSLA</li>
-            <li>3. AAPL</li>
-            <li>4. NVDA</li>
-            <li>5. MSFT</li>
-            <li>6. AMZN</li>
-            <li>7. AMD</li>
-            <li>8. BABA</li>
-            <li>9. X</li>
-            <li>10. AMC</li>
-          </ol>
+          <div class="grid grid-cols-2 gap-1 w-11/12 text-xl">
+            <div class=px-6>Ticker Symbol</div>
+            <div>Sentiment Score</div>
+          </div>
+          <div id=mstocks onclick="yahoolink()" class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg pl-20 pt-6 pb-8 mb-6 grid grid-cols-2 gap-2">
+          </div>
         </div>
  
   <!--Modal-->
