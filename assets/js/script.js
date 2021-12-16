@@ -1,8 +1,8 @@
-
 var openmodal = document.querySelectorAll('.modal-open')
 for (var i = 0; i < openmodal.length; i++) {
   openmodal[i].addEventListener('click', function(event){
    event.preventDefault()
+   fmpApi()
    toggleModal()
   })
 }
@@ -35,10 +35,11 @@ function toggleModal () {
   modal.classList.toggle('opacity-0')
   modal.classList.toggle('pointer-events-none')
   body.classList.toggle('modal-active')
+  clearModal()
 }
 
 // Wallstreetbets API
-const url = 'https://tradestie.com/api/v1/apps/reddit';
+const url = 'https://cors-proxy-blah.herokuapp.com/get-json/?url=http://tradestie.com/api/v1/apps/reddit';
 
 // Make request to URL
 fetch(url)
@@ -80,5 +81,45 @@ function appenddata(data) {
   }
 }
 // Add Yahoo API link
-function yahoolink() {
-  document.getElementById("mstocks").innerHTML = (url)}
+//function yahoolink() {
+  //document.getElementById("mstocks").innerHTML = (url)}
+
+// FMP API call 
+function fmpApi(){
+var ticker = document.getElementById('tickersymbol').value;
+var requestUrl = 'https://financialmodelingprep.com/api/v3/profile/'+ ticker +'?apikey=203f41c2d13b0a556884a3a115113e59';
+fetch(requestUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (stonkData) {
+    console.log('Your stonk');
+    console.log(stonkData);
+    var header =document.getElementById("modal-header").innerHTML = stonkData[0].companyName
+    const objectArray = Object.entries(stonkData[0]);
+    var modalBody = document.getElementById("modal-body")
+
+    for (x=0;x<10;x++){
+      console.log(objectArray[x])
+      var label = document.createElement('div');
+      var stonkValue = document.createElement('div');
+      label.innerHTML = objectArray[x][0];
+      stonkValue.innerHTML = objectArray[x][1]
+      modalBody.appendChild(label)
+      modalBody.appendChild(stonkValue)
+    }
+    storeTickers();
+  });
+}
+
+// Clear Modal content
+function clearModal(){
+  var modalBody = document.getElementById("modal-body")
+  modalBody.innerHTML = "";
+}
+
+// store search to local storage 
+function storeTickers(){
+ var symbol = document.getElementById('tickersymbol').value;
+ var storeTicker = window.localStorage.setItem('ticker', symbol);
+}
