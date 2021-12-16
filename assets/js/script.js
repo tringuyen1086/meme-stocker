@@ -81,8 +81,8 @@ function appenddata(data) {
   }
 }
 // Add Yahoo API link
-function yahoolink() {
-  document.getElementById("mstocks").innerHTML = (url)}
+//function yahoolink() {
+  //document.getElementById("mstocks").innerHTML = (url)}
 
 // FMP API call 
 function fmpApi(){
@@ -108,7 +108,7 @@ fetch(requestUrl)
       modalBody.appendChild(label)
       modalBody.appendChild(stonkValue)
     }
-
+    storeTickers();
   });
 }
 
@@ -116,4 +116,10 @@ fetch(requestUrl)
 function clearModal(){
   var modalBody = document.getElementById("modal-body")
   modalBody.innerHTML = "";
+}
+
+// store search to local storage 
+function storeTickers(){
+ var symbol = document.getElementById('tickersymbol').value;
+ var storeTicker = window.localStorage.setItem('ticker', symbol);
 }
