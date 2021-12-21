@@ -149,4 +149,4 @@ function loadLastTicker() {
 
 loadLastTicker();
 redditTopTen();
-setInterval(redditTopTen, 1000 * 60); // run this auto-refresh every 15 minutes
+setInterval(redditTopTen, 1000 * 60 * 15); // run this auto-refresh every 15 minutes
