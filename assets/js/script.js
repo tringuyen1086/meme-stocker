@@ -37,7 +37,6 @@ function toggleModal () {
 }
 // Wallstreetbets API
 function redditTopTen () {
-  console.log("calling redditTopTen");
   const url = 'https://cors-proxy-blah.herokuapp.com/get-json/?url=http://tradestie.com/api/v1/apps/reddit';
   // Make request to URL
   fetch(url)
@@ -65,6 +64,7 @@ function redditTopTen () {
   });
     // Dynamically fill divs with JSON data
     var mainContainer = document.getElementById("mstocks");
+    mainContainer.innerHTML = "";
     for (var i = 0; i < 10; i++) {
       // this is required because of javascript callback insanity
       let sym = sortdata[i].ticker;
@@ -149,4 +149,4 @@ function loadLastTicker() {
 
 loadLastTicker();
 redditTopTen();
-setInterval(redditTopTen, 1000 * 60 * 15); // run this auto-refresh every 15 minutes
+setInterval(redditTopTen, 1000 * 60); // run this auto-refresh every 15 minutes
